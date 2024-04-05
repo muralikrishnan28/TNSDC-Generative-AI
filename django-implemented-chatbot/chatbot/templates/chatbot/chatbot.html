@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "chatbot/styles/style.css" %}">
+    <script src="{% static "chatbot/scripts/script.js" %}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>ChatBot - Ecommerce</title>
+</head>
+<body>
+    <header>
+        <h1>Ecommerce Chatbot</h1>
+    </header>
+    <div class="chat-container">
+
+        <div class="chats">
+            <img src="{% static "chatbot/images/bot.jpg" %}" alt="bot-img">
+            <div class="content">
+                <span class="owner">Bot</span>
+                <p>{{ response }}</p>
+            </div>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" placeholder="Enter your queries!">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
